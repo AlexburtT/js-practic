@@ -1,0 +1,68 @@
+@font-face {
+	font-family: "Cormorant";
+	font-style: normal;
+	font-weight: 400;
+
+	/* Браузер сначала попробует найти шрифт локально */
+	src: local("Cormorant"),
+		url("/fonts/Cormorant.woff2") format("woff2"),
+}
+
+@font-face {
+	font-family: "Cormorant";
+	font-style: italic;
+	font-weight: 400;
+
+	/* Браузер сначала попробует найти шрифт локально */
+	src: local("Cormorant"),
+		url("/fonts/Cormorant.woff2") format("woff2"),
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Cormorant', serif;
+}
+
+
+body {
+	display: grid;
+
+	/* задаём высоту строк */
+	grid-template-rows: auto 1fr auto;
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+}
+
+.main {
+	font-style: italic;
+	font-size: 2rem;
+	text-align: center;
+	padding: 0.5rem;
+	flex-grow: 1;
+}
+
+.header {
+	background-color: rgb(31, 47, 53);
+	color: #ebebeb;
+	font-size: 2rem;
+	text-transform: uppercase;
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+
+}
+
+.footer {
+	background-color: rgb(31, 47, 53);
+	color: #ebebeb;
+	font-size: 2rem;
+	text-transform: uppercase;
+	height: 8vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
