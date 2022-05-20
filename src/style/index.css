@@ -6,6 +6,9 @@
 	font-family: 'Cormorant', serif;
 }
 
+html {
+	height: -webkit-fill-available;
+}
 
 body {
 	display: grid;
@@ -13,6 +16,8 @@ body {
 	/* задаём высоту строк */
 	grid-template-rows: auto 1fr auto;
 	min-height: 100vh;
+	/* mobile viewport bug fix */
+	min-height: -webkit-fill-available;
 }
 
 .main {
