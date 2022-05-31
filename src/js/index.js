@@ -1,5 +1,6 @@
-// document.getElementById('platform').innerHTML = navigator.userAgentData.platform
-// document.getElementById('hardwareConcurrency').innerHTML = navigator.hardwareConcurrency
-// document.getElementById('deviceMemory').innerHTML = navigator.deviceMemory
+document.getElementById('platform').innerHTML = navigator.userAgentData.platform;
+document.getElementById('hardwareConcurrency').innerHTML = navigator.hardwareConcurrency;
+document.getElementById('deviceMemory').innerHTML = navigator.deviceMemory;
 
-console.log(alert('Привет!'))
+console.log(navigator.userAgentData);
+console.log(alert('Привет!'));
