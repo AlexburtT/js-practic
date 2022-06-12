@@ -4,10 +4,22 @@ document.getElementById('deviceMemory').innerHTML = 'Оперативной па
 navigator.userAgentData
 	.getHighEntropyValues(['architecture', 'bitness', 'brands', 'mobile', 'model', 'platform', 'platformVersion', 'uaFullVersion', 'fullVersionList'])
 	.then(ua => {
-		document.getElementById('platform').innerHTML = navigator.userAgentData.platform + ' ' + ua.platformVersion;
+		document.getElementById('platform').innerHTML = ua.platform + ' ' + ua.platformVersion;
 		document.getElementById('model').innerHTML = 'Ваша модель' + ' ' + ua.model;
 	});
 
+let sayHello = (nameUser) => {
+	return "Доброго дня, " + nameUser.toUpperCase();
+}
+let getCurrentYear = () => {
+	return new Date().getFullYear();
+}
 
-// console.log(navigator.userAgentData);
-// console.log(alert('Привет!'));
+let nameUser = prompt('Как тебя зовут?', '');
+let age = prompt('Сколько тебе лет?', 51);
+let isBoss = confirm("Ты здесь главный?");
+
+
+console.log(isBoss); // true, если нажата OK
+
+document.getElementById('showUser').innerHTML = sayHello(`${nameUser}`) + ` Тубу лет ${age}` + ` Сейчас ` + getCurrentYear();
